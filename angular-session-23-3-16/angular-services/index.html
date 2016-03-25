@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Angular.js</title> 
+</head>
+<body ng-app="angApp">
+<div ng-controller="demoController" >
+    <h2>Hello Angular</h2>
+    <ul>
+    	<li ng-repeat="user in userList track by $index">
+    		<img ng-src="{{user.photo}}" />
+            <div class="index">{{$index}}</div>
+    		<div>{{user.first_name + " " + user.last_name}}</div>
+    		<div>{{user.email}}</div>
+    		<div>{{user.gender}}</div>
+    	</li>
+    </ul>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services/dataFactory.js"></script>
+</body>
+</html>

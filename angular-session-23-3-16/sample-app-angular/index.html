@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sample App Jquery</title>
+</head>
+
+<body ng-app="sampleApp">
+  <form ng-controller="sampleAppController">
+	  <p>Enter your name:<input type="text" ng-model="name" required>
+	  <button type="button" ng-click="submit()"
+              ng-disabled="!name">Submit</button>
+	  </p>
+	  <p ng-show="name">Hello, {{name}}</p>
+    <p>{{name1}}</p>
+    <p>{{1 + 2}}</p>
+    <div ng-repeat="item in name1">
+      {{item}}
+    </div>
+  </form>
+  <div ng-controller="sampleAppController1">
+    {{name1}} ang
+  </div>
+  <script src="angular.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
